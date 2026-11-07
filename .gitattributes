@@ -1,0 +1,7 @@
+# Shell scripts must keep LF: bash on Windows fails on CRLF.
+*.sh text eol=lf
+# Signed files (and files that get signed) keep their exact bytes: a CRLF
+# checkout would break the signature. Writers write LF themselves.
+*.json text eol=lf
+*.sig -text
+*.zip binary

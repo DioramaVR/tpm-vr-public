@@ -1,0 +1,234 @@
+{
+  "id": "tpm-vr",
+  "name": "Two Point Museum VR",
+  "game": "Two Point Museum",
+  "appid": 2185060,
+  "owners": {
+    "developer": "Two Point Studios",
+    "publisher": "SEGA"
+  },
+  "tagline": "Your museum as a living model on the table in front of you.",
+  "description": "Two Point Museum VR puts your whole museum on a table in front of you, like a model you can pick up. Grab it to move it, pull your hands apart to zoom in on a single exhibit, and twist to turn it round. Guests wander the halls, staff get on with their jobs, and you build and run everything as usual.\n\nYour hand is the mouse: point the laser at the game's menus and click, pick exhibits up and put them down where you like. The game's menus float on a panel behind the table, or split into windows around it, and you can move them wherever suits you. Prefer a smaller view? Turntable shows a circle of the museum on a table that spins.",
+  "requirements": [
+    "Runs in DirectX 11. The installer sets the launch options for you.",
+    "Made for seated play: the table sits at 0.75 m by default, and you can raise it on the View page.",
+    "Tested on a Quest 2 through SteamVR. Other SteamVR headsets should work but haven't been tested.",
+    "Left-handed players can swap the laser to the left hand in the VR menu."
+  ],
+  "firstLaunch": "It takes a few minutes, with a blank window, while BepInEx reads the game. It needs the internet that first time. Keep your VPN off.",
+  "needToKnow": [
+    "The game's camera tutorial asks you to tilt the camera: click the right stick. The table itself doesn't tilt, so lean or move your head to see it from another angle. While you're holding an exhibit, the same click changes placement mode instead."
+  ],
+  "controls": [
+    {
+      "input": "Right trigger",
+      "action": "Click. Hold on an exhibit to pick it up, let go to put it down",
+      "primary": true
+    },
+    {
+      "input": "B",
+      "action": "Right click"
+    },
+    {
+      "input": "Either grip",
+      "action": "Move the table",
+      "primary": true
+    },
+    {
+      "input": "Both grips",
+      "action": "Scale and turn the table",
+      "primary": true
+    },
+    {
+      "input": "Left stick left / right",
+      "action": "Turn the table",
+      "primary": true
+    },
+    {
+      "input": "Left stick up / down",
+      "action": "Zoom",
+      "primary": true
+    },
+    {
+      "input": "Right stick",
+      "action": "Pan around the museum (in Turntable, move the circle)",
+      "primary": true
+    },
+    {
+      "input": "Click the right stick",
+      "action": "Tilt the game's camera (the table itself doesn't tilt). While holding an exhibit, change placement mode"
+    },
+    {
+      "input": "A, or right stick left / right",
+      "action": "Rotate the exhibit you're holding"
+    },
+    {
+      "input": "Click the left stick",
+      "action": "Open or close the VR menu",
+      "primary": true
+    },
+    {
+      "input": "Both grips + both triggers",
+      "action": "Open the VR menu, at any time"
+    },
+    {
+      "input": "X",
+      "action": "Pause / play"
+    },
+    {
+      "input": "Y",
+      "action": "Back / close a menu"
+    }
+  ],
+  "tutorial": [
+    {
+      "title": "Getting started",
+      "text": "Load a save as usual. The museum appears as a diorama on a table in front of you. The game's menus float on a panel behind it. Open the VR menu to move it, or to split it into windows on the Game UI page.",
+      "controls": []
+    },
+    {
+      "title": "Point, click and pick up",
+      "text": "Your right hand is a laser pointer, like the mouse. These controls are for right-handed play: Left-handed (in the settings here, or on the VR menu's Controls page) swaps the hands.",
+      "controls": [
+        "Right trigger",
+        "B",
+        "A, or right stick left / right",
+        {
+          "input": "Click the right stick",
+          "action": "Change placement mode while holding one"
+        }
+      ]
+    },
+    {
+      "title": "Move the table",
+      "text": "Reach out and grab it.",
+      "controls": [
+        "Either grip",
+        {
+          "input": "Both grips",
+          "action": "Scale and turn it"
+        },
+        {
+          "input": "Left stick left / right",
+          "action": "Turn it"
+        },
+        "Left stick up / down",
+        {
+          "input": "Right stick",
+          "action": "Pan around the museum"
+        },
+        {
+          "input": "Click the right stick",
+          "action": "Tilt the game's camera (the table itself doesn't tilt)"
+        }
+      ]
+    },
+    {
+      "title": "Diorama or Turntable",
+      "text": "Pick the view on the VR menu's View page. Diorama puts the whole museum on the table; Turntable shows a circle of it on a table that spins. The table sits at 0.75 m for seated play: change its height on the View page, or grip it and lift or lower it.",
+      "controls": [
+        {
+          "input": "Right stick",
+          "action": "In Turntable, move the circle"
+        }
+      ]
+    },
+    {
+      "title": "The VR menu",
+      "text": "Settings, the controls (you can rebind them) and where the game's windows sit are all in the VR menu. Its Help page answers questions about Two Point Museum in VR.",
+      "controls": [
+        "Click the left stick",
+        "Both grips + both triggers",
+        "X",
+        "Y"
+      ]
+    },
+    {
+      "title": "The game's camera tutorial",
+      "text": "It asks for keys you don't have in VR. The Tutorial button bar by the table has them: arrows to pan, turn, zoom and tilt. Point the laser at one and pull the trigger. Switch the bar on or off on the VR menu's Home page. When it asks you to tilt the camera, click the right stick.",
+      "controls": []
+    },
+    {
+      "title": "If something goes wrong",
+      "text": "The first start takes a few minutes with a blank window; leave it be. If it crashes or looks wrong, the file BepInEx\\LogOutput.log in the game folder says why. Uninstalling here puts the game back to normal, and your saves are never touched.",
+      "controls": []
+    }
+  ],
+  "install": {
+    "exe": "TPM.exe",
+    "launchArgs": "-force-d3d11",
+    "steamAppIdFile": true,
+    "loaderConfig": {
+      "Logging.Console": {
+        "Enabled": false
+      },
+      "Logging": {
+        "UnityLogListening": false
+      }
+    }
+  },
+  "settings": {
+    "shared": {
+      "leftHanded": {
+        "section": "Controls",
+        "key": "LeftHanded"
+      },
+      "eyeResolution": {
+        "section": "Dvr.Graphics",
+        "key": "EyeResolution"
+      }
+    },
+    "options": [
+      {
+        "id": "desktopView",
+        "label": "Keep the monitor view",
+        "help": "Draw the game on the monitor too while you're in VR. Costs frame rate.",
+        "type": "bool",
+        "default": false,
+        "cfg": {
+          "section": "Dvr.Graphics",
+          "key": "DesktopView"
+        }
+      }
+    ]
+  },
+  "testedBuildIds": [
+    "26287332"
+  ],
+  "media": [
+    {
+      "file": "media/hero.jpg",
+      "kind": "image",
+      "role": "hero",
+      "alt": "A museum hall on the table in VR: guests queue past a frozen mammoth and a dinosaur skeleton, with the game's menus floating at the edge of the table."
+    },
+    {
+      "file": "media/turntable-720.webm",
+      "kind": "video",
+      "role": "turntable",
+      "alt": "A museum captured as a 3D model, turning slowly on a turntable.",
+      "poster": "media/turntable-poster.jpg"
+    },
+    {
+      "file": "media/turntable-720.webm",
+      "kind": "video",
+      "role": "hover",
+      "alt": "A museum captured as a 3D model, turning slowly."
+    },
+    {
+      "file": "media/headset-view.jpg",
+      "kind": "image",
+      "role": "gallery",
+      "alt": "The same hall as seen in the headset, with the build toolbar and the laser pointer."
+    },
+    {
+      "file": "media/windows-around-table.jpg",
+      "kind": "image",
+      "role": "gallery",
+      "alt": "The museum grounds on the table with the game's windows arranged around it and the camera keys floating on the left."
+    }
+  ],
+  "mediaGaps": [
+    "A real gameplay clip from the headset (building, picking up and placing exhibits)."
+  ]
+}

@@ -1,0 +1,37 @@
+[
+  {
+    "id": "crate-cinema",
+    "title": "Crate openings show on a flat screen",
+    "severity": "minor",
+    "text": "Opening an expedition crate and other scenes away from the museum show on a big flat screen instead of the table. The table comes back when you return to the museum.",
+    "since": "0.1.0"
+  },
+  {
+    "id": "save-thumbnails",
+    "title": "Save pictures can come out blank",
+    "severity": "minor",
+    "text": "A museum saved while in VR may show a plain dark picture on the level select card. The save itself is fine.",
+    "since": "0.1.0"
+  },
+  {
+    "id": "monitor-ui",
+    "title": "The monitor doesn't show the game's menus",
+    "severity": "minor",
+    "text": "While you're in VR, the game's menus are drawn in the headset only, so someone watching the monitor won't see them.",
+    "since": "0.1.0"
+  },
+  {
+    "id": "window-clicks",
+    "title": "Split window modes are still being tested",
+    "severity": "annoying",
+    "text": "Clicks in the Arranged and Free window modes haven't been fully tested. If a button doesn't respond, switch to Panel on the VR menu's Game UI page.",
+    "since": "0.1.0"
+  },
+  {
+    "id": "passthrough",
+    "title": "The Passthrough background doesn't work yet",
+    "severity": "minor",
+    "text": "Turntable's Passthrough background needs a green-screen key in the headset, which Virtual Desktop doesn't support yet. Use Light or Dark for now.",
+    "since": "0.1.0"
+  }
+]

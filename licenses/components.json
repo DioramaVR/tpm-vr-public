@@ -1,0 +1,386 @@
+{
+  "_about": "Everything the TPM VR package ships, with its licence. The engine is dvr-actions scripts/licenses.js (run with --data <this folder>); it writes payload/licenses/ at package time and stops if a shipped file isn't covered here or a pinned file has changed (re-check its licence and version, then run it with --pin). Licence texts in third-party/ were taken from each component's own repository at the version shipped (2026-11-07).",
+  "title": "Two Point Museum VR",
+  "notice": "Two Point Museum is Two Point Studios' and SEGA's; this is an unofficial fan mod.",
+  "components": [
+    {
+      "id": "tpm-vr",
+      "name": "Two Point Museum VR (this mod)",
+      "version": "the package version",
+      "license": "MIT",
+      "copyright": "Copyright (c) 2026 scrire",
+      "source": "https://github.com/DioramaVR/tpm-vr-public",
+      "text": "../tools/release/public/LICENSE",
+      "includes": "the Diorama VR Unity core (dvr-unity-core), compiled into TpmVr.dll: MIT, Copyright (c) 2026 scrire; and Valve's OpenVR C# bindings (openvr_api.cs), compiled in with it: BSD-3-Clause, see the OpenVR SDK entry",
+      "files": [
+        "BepInEx/plugins/TpmVr/TpmVr.dll",
+        "BepInEx/plugins/TpmVr/tpmvr-shaders"
+      ],
+      "mod": true
+    },
+    {
+      "id": "tilt-warp",
+      "name": "Tilt Warp (font)",
+      "version": "Google Fonts, ofl/tiltwarp, 2026-11-06",
+      "license": "OFL-1.1",
+      "copyright": "see the licence",
+      "source": "https://github.com/google/fonts/tree/main/ofl/tiltwarp",
+      "text": "payload:BepInEx/plugins/TpmVr/fonts/OFL-TiltWarp.txt",
+      "files": [
+        "BepInEx/plugins/TpmVr/fonts/TiltWarp.ttf",
+        "BepInEx/plugins/TpmVr/fonts/OFL-TiltWarp.txt",
+        "BepInEx/plugins/TpmVr/fonts/README.md"
+      ]
+    },
+    {
+      "id": "atkinson-hyperlegible-next",
+      "name": "Atkinson Hyperlegible Next (font)",
+      "version": "commit 7925f50",
+      "license": "OFL-1.1",
+      "copyright": "see the licence",
+      "source": "https://github.com/googlefonts/atkinson-hyperlegible-next/tree/7925f50",
+      "text": "payload:BepInEx/plugins/TpmVr/fonts/OFL-AtkinsonHyperlegibleNext.txt",
+      "files": [
+        "BepInEx/plugins/TpmVr/fonts/AtkinsonHyperlegibleNext-*.ttf",
+        "BepInEx/plugins/TpmVr/fonts/OFL-AtkinsonHyperlegibleNext.txt"
+      ]
+    },
+    {
+      "id": "lucide",
+      "name": "Lucide icons",
+      "version": "lucide-static 0.460.0",
+      "license": "ISC",
+      "copyright": "Cole Bemis 2013-2022 (Feather, MIT); Lucide Contributors 2022",
+      "source": "https://github.com/lucide-icons/lucide/tree/0.460.0",
+      "text": "payload:BepInEx/plugins/TpmVr/icons/LICENSE-lucide.txt",
+      "files": [
+        "BepInEx/plugins/TpmVr/icons/*.png",
+        "BepInEx/plugins/TpmVr/icons/LICENSE-lucide.txt",
+        "BepInEx/plugins/TpmVr/icons/README.md"
+      ]
+    },
+    {
+      "id": "openvr",
+      "name": "OpenVR SDK (openvr_api.dll, and the C# bindings openvr_api.cs compiled into TpmVr.dll)",
+      "version": "v2.15.6",
+      "license": "BSD-3-Clause",
+      "copyright": "Copyright (c) 2015, Valve Corporation",
+      "source": "https://github.com/ValveSoftware/openvr/tree/v2.15.6",
+      "text": "third-party/openvr.txt",
+      "files": [
+        "BepInEx/plugins/TpmVr/openvr_api.dll"
+      ],
+      "pin": [
+        "BepInEx/plugins/TpmVr/openvr_api.dll"
+      ]
+    },
+    {
+      "id": "bepinex",
+      "name": "BepInEx",
+      "version": "6.0.0-be.791 (commit b782da4ac54e1072d2857f4a2f77c80c3ef08005)",
+      "license": "LGPL-2.1",
+      "copyright": "Copyright (c) 2022 BepInEx Team",
+      "source": "https://github.com/BepInEx/BepInEx/tree/b782da4ac54e1072d2857f4a2f77c80c3ef08005",
+      "lgpl": "These are the unmodified official BepInEx 6.0.0-be.791 builds, shipped as separate DLLs in BepInEx/core: you can replace them with your own builds. The complete corresponding source is at the link above, and builds.bepinex.dev has the official build.",
+      "text": "third-party/bepinex.txt",
+      "files": [
+        "BepInEx/core/BepInEx.*",
+        "BepInEx/config/BepInEx.cfg"
+      ],
+      "pin": [
+        "BepInEx/core/BepInEx.Core.dll",
+        "BepInEx/core/BepInEx.Preloader.Core.dll",
+        "BepInEx/core/BepInEx.Unity.Common.dll",
+        "BepInEx/core/BepInEx.Unity.IL2CPP.dll"
+      ]
+    },
+    {
+      "id": "il2cppinterop",
+      "name": "Il2CppInterop",
+      "version": "1.5.3 (commit dbda1cb353b0f4253345dc45136d170b9e50a5a0)",
+      "license": "LGPL-3.0",
+      "copyright": "Copyright (c) BepInEx and contributors (Il2CppInterop, formerly Il2CppAssemblyUnhollower by knah)",
+      "source": "https://github.com/BepInEx/Il2CppInterop/tree/dbda1cb353b0f4253345dc45136d170b9e50a5a0",
+      "lgpl": "Unmodified, as shipped in BepInEx 6.0.0-be.791, as separate DLLs in BepInEx/core: you can replace them with your own builds. The complete corresponding source is at the link above. The LGPL 3.0 adds to the GPL 3.0; its text follows the LGPL below.",
+      "text": "third-party/il2cppinterop.txt",
+      "files": [
+        "BepInEx/core/Il2CppInterop.*.dll"
+      ],
+      "pin": [
+        "BepInEx/core/Il2CppInterop.Common.dll",
+        "BepInEx/core/Il2CppInterop.Generator.dll",
+        "BepInEx/core/Il2CppInterop.HarmonySupport.dll",
+        "BepInEx/core/Il2CppInterop.Runtime.dll"
+      ],
+      "extraTexts": [
+        "third-party/gpl-3.0.txt"
+      ]
+    },
+    {
+      "id": "doorstop",
+      "name": "UnityDoorstop (winhttp.dll)",
+      "version": "4.6.0",
+      "license": "LGPL-2.1",
+      "copyright": "Copyright (c) NeighTools and contributors",
+      "source": "https://github.com/NeighTools/UnityDoorstop/tree/v4.6.0",
+      "lgpl": "The unmodified official release (doorstop_win_release_4.6.0) as BepInEx 6.0.0-be.791 ships it, as a separate DLL you can replace. The complete corresponding source is at the link above.",
+      "text": "third-party/doorstop.txt",
+      "files": [
+        "winhttp.dll",
+        "doorstop_config.ini"
+      ],
+      "pin": [
+        "winhttp.dll"
+      ]
+    },
+    {
+      "id": "dobby",
+      "name": "Dobby (BepInEx's build)",
+      "version": "1.0.5",
+      "license": "Apache-2.0",
+      "copyright": "Copyright (c) jmpews and contributors",
+      "source": "https://github.com/BepInEx/Dobby/tree/v1.0.5",
+      "text": "third-party/dobby.txt",
+      "files": [
+        "BepInEx/core/dobby.dll"
+      ],
+      "pin": [
+        "BepInEx/core/dobby.dll"
+      ]
+    },
+    {
+      "id": "dotnet-runtime",
+      "name": ".NET runtime (BepInEx's minimal CoreCLR build)",
+      "version": "6.0.7 (dotnet/runtime commit 0ec02c8c96e2eda06dc5b5edfdbdba0f36415082)",
+      "license": "MIT",
+      "copyright": "Copyright (c) .NET Foundation and Contributors",
+      "source": "https://github.com/BepInEx/dotnet-runtime/tree/6.0.7",
+      "text": "third-party/dotnet-runtime.txt",
+      "extraTexts": [
+        "third-party/dotnet-runtime-third-party-notices.txt"
+      ],
+      "files": [
+        "dotnet/**"
+      ],
+      "pin": [
+        "dotnet/coreclr.dll",
+        "dotnet/System.Private.CoreLib.dll",
+        "dotnet/.version"
+      ]
+    },
+    {
+      "id": "harmonyx",
+      "name": "HarmonyX (0Harmony.dll)",
+      "version": "2.10.2",
+      "license": "MIT",
+      "copyright": "Copyright (c) 2020 BepInEx",
+      "source": "https://github.com/BepInEx/HarmonyX/tree/v2.10.2",
+      "text": "third-party/harmonyx.txt",
+      "files": [
+        "BepInEx/core/0Harmony.dll"
+      ],
+      "pin": [
+        "BepInEx/core/0Harmony.dll"
+      ]
+    },
+    {
+      "id": "cecil",
+      "name": "Mono.Cecil",
+      "version": "0.11.4",
+      "license": "MIT",
+      "copyright": "Copyright (c) 2008 - 2015 Jb Evain; Copyright (c) 2008 - 2011 Novell, Inc.",
+      "source": "https://github.com/jbevain/cecil/tree/0.11.4",
+      "text": "third-party/cecil.txt",
+      "files": [
+        "BepInEx/core/Mono.Cecil*.dll"
+      ],
+      "pin": [
+        "BepInEx/core/Mono.Cecil.dll"
+      ]
+    },
+    {
+      "id": "monomod",
+      "name": "MonoMod (Utils, RuntimeDetour, Backports, ILHelpers)",
+      "version": "MonoMod 22.07.31.01; MonoMod.Backports 1.1.2 (commit a1b82852b)",
+      "license": "MIT",
+      "copyright": "Copyright (c) 2015 - 2020 0x0ade",
+      "source": "https://github.com/MonoMod/MonoMod/tree/v22.07.31.01 and https://github.com/MonoMod/MonoMod/tree/a1b82852b",
+      "text": "third-party/monomod.txt",
+      "files": [
+        "BepInEx/core/MonoMod.*.dll"
+      ],
+      "pin": [
+        "BepInEx/core/MonoMod.Utils.dll",
+        "BepInEx/core/MonoMod.RuntimeDetour.dll",
+        "BepInEx/core/MonoMod.Backports.dll",
+        "BepInEx/core/MonoMod.ILHelpers.dll"
+      ]
+    },
+    {
+      "id": "asmresolver",
+      "name": "AsmResolver",
+      "version": "6.0.0-beta.5 (commit 124e161a9bc0ebb83b4d97276ae3da3c9cfe2fc5)",
+      "license": "MIT",
+      "copyright": "Copyright (c) Washi 2016-2025",
+      "source": "https://github.com/Washi1337/AsmResolver/tree/124e161a9bc0ebb83b4d97276ae3da3c9cfe2fc5",
+      "text": "third-party/asmresolver.txt",
+      "files": [
+        "BepInEx/core/AsmResolver*.dll"
+      ],
+      "pin": [
+        "BepInEx/core/AsmResolver.dll"
+      ]
+    },
+    {
+      "id": "assetripper-cil",
+      "name": "AssetRipper.CIL",
+      "version": "1.2.2 (commit 06216e69825ccd6536dc17e9ca81c4d539ce9321)",
+      "license": "MIT",
+      "copyright": "Copyright (c) 2024 ds5678",
+      "source": "https://github.com/AssetRipper/AssetRipper.CIL/tree/06216e69825ccd6536dc17e9ca81c4d539ce9321",
+      "text": "third-party/assetripper-cil.txt",
+      "files": [
+        "BepInEx/core/AssetRipper.CIL.dll"
+      ],
+      "pin": [
+        "BepInEx/core/AssetRipper.CIL.dll"
+      ]
+    },
+    {
+      "id": "assetripper-primitives",
+      "name": "AssetRipper.Primitives",
+      "version": "3.2.0 (commit d759b3db98bf2a1cb8c2181faf5d405610aac585)",
+      "license": "MIT",
+      "copyright": "Copyright (c) 2022 ds5678; parts Copyright (c) 2020 mafaca (uTinyRipper)",
+      "source": "https://github.com/AssetRipper/AssetRipper.Primitives/tree/d759b3db98bf2a1cb8c2181faf5d405610aac585",
+      "text": "third-party/assetripper-primitives.txt",
+      "extraTexts": [
+        "third-party/assetripper-primitives-utinyripper.txt"
+      ],
+      "files": [
+        "BepInEx/core/AssetRipper.Primitives.dll"
+      ],
+      "pin": [
+        "BepInEx/core/AssetRipper.Primitives.dll"
+      ]
+    },
+    {
+      "id": "cpp2il",
+      "name": "Cpp2IL (Cpp2IL.Core, LibCpp2IL, StableNameDotNet, WasmDisassembler)",
+      "version": "2022.1.0-development.1452 (commit 558ddd98642010897d54316b51fbaa7889fda093)",
+      "license": "MIT",
+      "copyright": "Copyright (c) 2020 Sam Byass",
+      "source": "https://github.com/SamboyCoding/Cpp2IL/tree/558ddd98642010897d54316b51fbaa7889fda093",
+      "text": "third-party/cpp2il.txt",
+      "files": [
+        "BepInEx/core/Cpp2IL.Core.dll",
+        "BepInEx/core/LibCpp2IL.dll",
+        "BepInEx/core/StableNameDotNet.dll",
+        "BepInEx/core/WasmDisassembler.dll"
+      ],
+      "pin": [
+        "BepInEx/core/Cpp2IL.Core.dll",
+        "BepInEx/core/LibCpp2IL.dll"
+      ]
+    },
+    {
+      "id": "disarm",
+      "name": "Disarm",
+      "version": "2022.1.0-master.99 (commit 8574010015c8c56bb7faad7e407c50b0abe9cc72)",
+      "license": "MIT",
+      "copyright": "Copyright (c) Sam Byass",
+      "source": "https://github.com/SamboyCoding/Disarm/tree/8574010015c8c56bb7faad7e407c50b0abe9cc72",
+      "text": "third-party/disarm.txt",
+      "files": [
+        "BepInEx/core/Disarm.dll"
+      ],
+      "pin": [
+        "BepInEx/core/Disarm.dll"
+      ]
+    },
+    {
+      "id": "iced",
+      "name": "Iced",
+      "version": "1.21.0 (commit 601c40570d6c986c8e1a6a2e483dd2fdf5ade552)",
+      "license": "MIT",
+      "copyright": "Copyright (C) 2018-present iced project and contributors",
+      "source": "https://github.com/icedland/iced/tree/601c40570d6c986c8e1a6a2e483dd2fdf5ade552",
+      "text": "third-party/iced.txt",
+      "files": [
+        "BepInEx/core/Iced.dll"
+      ],
+      "pin": [
+        "BepInEx/core/Iced.dll"
+      ]
+    },
+    {
+      "id": "capstone-net",
+      "name": "Capstone.NET (Gee.External.Capstone.dll; the native Capstone library isn't shipped)",
+      "version": "2.3.2 (commit b90e380c14e857865c94a355954236e678bd557c)",
+      "license": "MIT",
+      "copyright": "Copyright (c) Ahmed Garhy",
+      "source": "https://github.com/9ee1/Capstone.NET/tree/b90e380c14e857865c94a355954236e678bd557c",
+      "text": "third-party/capstone-net.txt",
+      "files": [
+        "BepInEx/core/Gee.External.Capstone.dll"
+      ],
+      "pin": [
+        "BepInEx/core/Gee.External.Capstone.dll"
+      ]
+    },
+    {
+      "id": "semver",
+      "name": "SemanticVersioning (semver.net)",
+      "version": "2.0.2",
+      "license": "MIT",
+      "copyright": "Copyright (c) 2016 Adam Reeve",
+      "source": "https://github.com/adamreeve/semver.net/tree/2.0.2",
+      "text": "third-party/semver.txt",
+      "files": [
+        "BepInEx/core/SemanticVersioning.dll"
+      ],
+      "pin": [
+        "BepInEx/core/SemanticVersioning.dll"
+      ]
+    }
+  ],
+  "neverShipped": [
+    "BepInEx/unity-libs/**",
+    "BepInEx/interop/**",
+    "**/UnityEngine*.dll",
+    "**/Assembly-CSharp*.dll",
+    "**/Unity.*.dll",
+    "**/Il2Cppmscorlib.dll"
+  ],
+  "pins": {
+    "BepInEx/plugins/TpmVr/openvr_api.dll": "bab8ac6ef64e68a9ca53315b0014d131088584b2efdfa6db511d67ec03cfcb4a",
+    "BepInEx/core/BepInEx.Core.dll": "a9c55b457259672eefc34417e86e627beaf90acb11a8ae889191a7ff70f72143",
+    "BepInEx/core/BepInEx.Preloader.Core.dll": "6689e6396597789c8db32cf5f625595c9390448e36f1c8607e3934930762d3a4",
+    "BepInEx/core/BepInEx.Unity.Common.dll": "3a8383c8ae0d1fae1a063b544bbda86e68f71f83bef8a06a255d998605c7f3cd",
+    "BepInEx/core/BepInEx.Unity.IL2CPP.dll": "2060949ca0db6fdbf47f4a9c5d9aeb3535292efa79c05c438661f406a40b30ac",
+    "BepInEx/core/Il2CppInterop.Common.dll": "070e04f2276a8963a6d2a7eb52d43b644f3ae9aa3816c34541124d3862f1b37f",
+    "BepInEx/core/Il2CppInterop.Generator.dll": "95364bf2686f50d114784e482a0e78c472f6a649d07ea31a075328b2b756899d",
+    "BepInEx/core/Il2CppInterop.HarmonySupport.dll": "f7612ea2e5a4d473b771f34ee3b20cf32dc0c4ecea0185416474999a17fbcc07",
+    "BepInEx/core/Il2CppInterop.Runtime.dll": "65ab051a681c2c1e52df7596ff738be401aae72cff882ff18241cf54a3ea38a4",
+    "winhttp.dll": "0f39399eba05dea9419781187ae2a6b0555afcdf1859f1319b6213be7729013b",
+    "BepInEx/core/dobby.dll": "8015de7d867245a1095d13947a63763878e4cf5fd3d3089b63cc39200b055ded",
+    "dotnet/coreclr.dll": "04377968c540f704aae92ecb0ec9bbfd5fddfe226dfca30aa3eeb52006a44fd8",
+    "dotnet/System.Private.CoreLib.dll": "2caa46d2ae726e135592033b6c682232a08698c23dbd1a9207f86c4cca081ad7",
+    "dotnet/.version": "4052ab33b00d0411fc9ce103ac9d51564cf8630fddb7464d82ddcc168d4d302c",
+    "BepInEx/core/0Harmony.dll": "6c898933b52149e8bcf6722305c7e4d94add47c9e53b364096f91721624c0877",
+    "BepInEx/core/Mono.Cecil.dll": "769a59793d4b8885bbbfbc5aee8f57a0d4e34d275c56c60c03994309b87f67e9",
+    "BepInEx/core/MonoMod.Utils.dll": "72a5b4249985873d7ecb160cbbed7a1e6540a38ee7618c72c64b9cb068c1438a",
+    "BepInEx/core/MonoMod.RuntimeDetour.dll": "1b3d55f53cb9f9f2550daed4dfd300b247d71698a0ace82bc7b9ff38d563594f",
+    "BepInEx/core/MonoMod.Backports.dll": "cdd6e9f7bcdb98d2c002f63bfbe85ae80ea36261190a741e64283d769a6c6502",
+    "BepInEx/core/MonoMod.ILHelpers.dll": "0081403bdcef3340f78c7ccded0be6ae0507b397ee8b9980b44f01bf9f93aed1",
+    "BepInEx/core/AsmResolver.dll": "64b50030b34654f12805ec4d2848551e431c5f0bcd65cd70d6fe2845f715fb12",
+    "BepInEx/core/AssetRipper.CIL.dll": "1eeff8d76dda5d65e5145ab0d43a3dac672e096e5692c47e0382ebb3c7c817f9",
+    "BepInEx/core/AssetRipper.Primitives.dll": "681ba26fd356d9263fdf6afeb1b8f8506802a9503ffa80c9d21e0c4a46743a28",
+    "BepInEx/core/Cpp2IL.Core.dll": "a7ae866298472bfa5176c1b5b71adfa9fe6e2f1deef7b8d50f063c0e2c0ba258",
+    "BepInEx/core/LibCpp2IL.dll": "dd3bd5417cac3fd203b906a90dbae6719136e61f43c2b4eed55f56242bb10a14",
+    "BepInEx/core/Disarm.dll": "40e804c35369825884534734725d06831a534759478c8d9f3f908d80779a1a93",
+    "BepInEx/core/Iced.dll": "f058c01321b4cdfc9b9151879e88e59571c8d0ba176fbcf95bc936a8f3d073ed",
+    "BepInEx/core/Gee.External.Capstone.dll": "18f9cfbfd10b479143a46b3e417ccfce4a62d4c2770da9ed12d553a0b326302c",
+    "BepInEx/core/SemanticVersioning.dll": "a5b57607225a0ebde049e93469f49e5b2d07a7d602a03864ce3a72ccf57103a2"
+  }
+}

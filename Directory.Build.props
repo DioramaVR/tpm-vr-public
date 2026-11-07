@@ -1,0 +1,10 @@
+<Project>
+  <PropertyGroup>
+    <GameDir>D:\SteamLibrary\steamapps\common\Two Point Museum</GameDir>
+    <BepInExDir>$(GameDir)\BepInEx</BepInExDir>
+    <!-- The shared Diorama VR Unity core (dvr-unity-core, compiled in as source): a checkout in core\dvr-unity-core. -->
+    <DvrCoreDir Condition="'$(DvrCoreDir)' == ''">$(MSBuildThisFileDirectory)..\..\core\dvr-unity-core\</DvrCoreDir>
+    <!-- The core version this mod is built and tested with; the build stops on another. -->
+    <DvrCoreVersion>0.1.1</DvrCoreVersion>
+  </PropertyGroup>
+</Project>

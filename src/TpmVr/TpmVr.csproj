@@ -1,0 +1,64 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <AssemblyName>TpmVr</AssemblyName>
+    <Nullable>disable</Nullable>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <LangVersion>latest</LangVersion>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <DvrRuntime>IL2CPP</DvrRuntime>
+    <DvrPipeline>URP</DvrPipeline>
+    <!-- Release builds carry no debug-symbols path: it would name the build machine's
+         folders (the home folder) inside the DLL, which ships to players. -->
+    <DebugType Condition="'$(Configuration)' == 'Release'">none</DebugType>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+
+  <Import Project="$(DvrCoreDir)DvrUnityCore.props" />
+
+  <ItemGroup>
+    <Reference Include="$(BepInExDir)\core\BepInEx.Core.dll" Private="false" />
+    <Reference Include="$(BepInExDir)\core\BepInEx.Unity.IL2CPP.dll" Private="false" />
+    <Reference Include="$(BepInExDir)\core\Il2CppInterop.Runtime.dll" Private="false" />
+    <Reference Include="$(BepInExDir)\core\Il2CppInterop.Common.dll" Private="false" />
+    <Reference Include="$(BepInExDir)\core\0Harmony.dll" Private="false" />
+    <Reference Include="$(BepInExDir)\core\MonoMod.RuntimeDetour.dll" Private="false" />
+    <Reference Include="$(BepInExDir)\interop\Il2Cppmscorlib.dll" Private="false" />
+    <Reference Include="$(BepInExDir)\interop\UnityEngine.CoreModule.dll" Private="false" />
+    <Reference Include="$(BepInExDir)\interop\UnityEngine.UI.dll" Private="false" />
+    <Reference Include="$(BepInExDir)\interop\UnityEngine.UIModule.dll" Private="false" />
+    <Reference Include="$(BepInExDir)\interop\UnityEngine.TextRenderingModule.dll" Private="false" />
+    <Reference Include="$(BepInExDir)\interop\UnityEngine.VideoModule.dll" Private="false" />
+    <Reference Include="$(BepInExDir)\interop\UnityEngine.AssetBundleModule.dll" Private="false" />
+    <Reference Include="$(BepInExDir)\interop\TPS.Core.dll" Private="false" />
+    <Reference Include="$(BepInExDir)\interop\TPS.Core.Utils.dll" Private="false" />
+    <Reference Include="$(BepInExDir)\interop\TPS.Game.dll" Private="false" />
+    <Reference Include="$(BepInExDir)\interop\TPS.Octalux.dll" Private="false" />
+    <Reference Include="$(BepInExDir)\interop\Unity.TextMeshPro.dll" Private="false" />
+    <Reference Include="$(BepInExDir)\interop\Unity.RenderPipelines.Core.Runtime.dll" Private="false" />
+    <Reference Include="$(BepInExDir)\interop\Unity.RenderPipelines.Universal.Runtime.dll" Private="false" />
+    <Reference Include="$(BepInExDir)\interop\Unity.Entities.dll" Private="false" />
+    <Reference Include="$(BepInExDir)\interop\Unity.Mathematics.dll" Private="false" />
+    <Reference Include="$(BepInExDir)\interop\Unity.InputSystem.dll" Private="false" />
+    <Reference Include="$(BepInExDir)\interop\UnityEngine.PhysicsModule.dll" Private="false" />
+    <Reference Include="$(BepInExDir)\interop\UnityEngine.ImageConversionModule.dll" Private="false" />
+    <Reference Include="$(BepInExDir)\interop\UnityEngine.ScreenCaptureModule.dll" Private="false" />
+    <Reference Include="$(BepInExDir)\interop\Unity.Collections.dll" Private="false" />
+  </ItemGroup>
+
+  <!-- Copy the built plugin straight into the game's plugin folder, with the core's
+       menu fonts\ and icons\ (the core finds them next to its DLL). Compile only, no
+       deploy: -p:NoDeploy=true or -p:SkipDeploy=true. -->
+  <Target Name="DeployToGame" AfterTargets="Build" Condition="'$(NoDeploy)' != 'true' and '$(SkipDeploy)' != 'true'">
+    <ItemGroup>
+      <MenuFonts Include="$(TargetDir)fonts\*.*" />
+      <MenuIcons Include="$(TargetDir)icons\*.*" />
+    </ItemGroup>
+    <MakeDir Directories="$(BepInExDir)\plugins\TpmVr" />
+    <Copy SourceFiles="$(TargetPath);$(MSBuildThisFileDirectory)..\..\lib\openvr_api.dll" DestinationFolder="$(BepInExDir)\plugins\TpmVr" SkipUnchangedFiles="true" />
+    <Copy SourceFiles="$(MSBuildThisFileDirectory)..\..\lib\tpmvr-shaders" DestinationFolder="$(BepInExDir)\plugins\TpmVr" SkipUnchangedFiles="true" Condition="Exists('$(MSBuildThisFileDirectory)..\..\lib\tpmvr-shaders')" />
+    <Copy SourceFiles="@(MenuFonts)" DestinationFolder="$(BepInExDir)\plugins\TpmVr\fonts" SkipUnchangedFiles="true" />
+    <Copy SourceFiles="@(MenuIcons)" DestinationFolder="$(BepInExDir)\plugins\TpmVr\icons" SkipUnchangedFiles="true" />
+  </Target>
+</Project>

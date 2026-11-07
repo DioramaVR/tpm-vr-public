@@ -1,0 +1,68 @@
+{
+  "format": 1,
+  "id": "tpm-vr",
+  "name": "Two Point Museum VR",
+  "game": "Two Point Museum",
+  "appid": 2185060,
+  "description": "Your museum as a living model on the table in front of you.",
+  "releases": [
+    {
+      "version": "0.1.0",
+      "maturity": "open-beta",
+      "date": "2026-11-07",
+      "coreVersion": "0.1.1",
+      "minAppVersion": "0.2.0",
+      "testedBuildIds": [
+        "26287332"
+      ],
+      "url": "https://github.com/DioramaVR/tpm-vr-public/releases/download/v0.1.0/tpm-vr-0.1.0.zip",
+      "sha256": "A9CB1F7B62D61F6A6D4F09B75DA178A4628D929A612C2A90EF8DDBC64E7231E4",
+      "size": 42847898,
+      "source": {
+        "commit": "3a339334095e6f7360ff65ddf8c3e41e6b8c5cba",
+        "coreRepo": "DioramaVR/dvr-unity-core",
+        "coreCommit": "64743e8112fa725730a52fa75a441c99e36c1d9f",
+        "coreFrom": "tag v0.1.1",
+        "actionsCommit": "2dfac17e40e86fb72aefdb497f36979cf6e252f5",
+        "builtAt": "2026-11-07T21:58:06.619Z"
+      }
+    }
+  ],
+  "knownIssues": [
+    {
+      "id": "crate-cinema",
+      "title": "Crate openings show on a flat screen",
+      "severity": "minor",
+      "text": "Opening an expedition crate and other scenes away from the museum show on a big flat screen instead of the table. The table comes back when you return to the museum.",
+      "since": "0.1.0"
+    },
+    {
+      "id": "save-thumbnails",
+      "title": "Save pictures can come out blank",
+      "severity": "minor",
+      "text": "A museum saved while in VR may show a plain dark picture on the level select card. The save itself is fine.",
+      "since": "0.1.0"
+    },
+    {
+      "id": "monitor-ui",
+      "title": "The monitor doesn't show the game's menus",
+      "severity": "minor",
+      "text": "While you're in VR, the game's menus are drawn in the headset only, so someone watching the monitor won't see them.",
+      "since": "0.1.0"
+    },
+    {
+      "id": "window-clicks",
+      "title": "Split window modes are still being tested",
+      "severity": "annoying",
+      "text": "Clicks in the Arranged and Free window modes haven't been fully tested. If a button doesn't respond, switch to Panel on the VR menu's Game UI page.",
+      "since": "0.1.0"
+    },
+    {
+      "id": "passthrough",
+      "title": "The Passthrough background doesn't work yet",
+      "severity": "minor",
+      "text": "Turntable's Passthrough background needs a green-screen key in the headset, which Virtual Desktop doesn't support yet. Use Light or Dark for now.",
+      "since": "0.1.0"
+    }
+  ]
+}
