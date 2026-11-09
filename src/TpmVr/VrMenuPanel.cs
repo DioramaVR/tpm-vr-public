@@ -173,6 +173,10 @@ static class VrMenuPanel
             var renderer = panel.GetComponent<Renderer>();
             renderer.sharedMaterial = material;
             renderer.shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.Off;
+            // Turntable pulls the eyes' far plane in to the circle (the core's
+            // CylinderCull.FitFar) and keeps only registered UI quads inside it;
+            // unregistered, this panel was clipped away whenever you looked down.
+            VrUiKit.UiGeometry.Register(renderer);
         }
     }
 

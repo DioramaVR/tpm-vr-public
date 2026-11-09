@@ -393,7 +393,7 @@ static partial class SimScript
 
             // The Tutorial hotkey bar, menu closed: clicking its buttons presses the game's keys.
             // Each set is its own bar, switched on by itself: turn this one on for the test.
-            var tutorialBar = VrUiKit.VrHotkeys.Set("Tutorial");
+            var tutorialBar = VrUiKit.VrHotkeys.Set(TpmUi.TutorialBar);
             bool tutorialWasOn = VrUiKit.VrHotkeys.IsOn(tutorialBar);
             VrUiKit.VrHotkeys.SetOn(tutorialBar, true);
             yield return 0.5f;

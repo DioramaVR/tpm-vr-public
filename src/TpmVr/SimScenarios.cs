@@ -831,7 +831,7 @@ static partial class SimScript
 
         // A button bar (core 0.1.1): the laser carries the Tutorial bar to the off-hand
         // wrist (green preview there), and it rides on the hand like a window.
-        var tutorial = VrUiKit.VrHotkeys.Set("Tutorial");
+        var tutorial = VrUiKit.VrHotkeys.Set(TpmUi.TutorialBar);
         bool tutorialWasOn = VrUiKit.VrHotkeys.IsOn(tutorial);
         VrUiKit.VrHotkeys.SetOn(tutorial, true);
         leftPose = new Pose(new NVec(-0.2f, 1.1f, 0.35f), System.Numerics.Quaternion.Identity);

@@ -19,7 +19,7 @@ namespace TpmVr;
 public class Plugin : BasePlugin
 {
     public const string Guid = "dvr.tpm";
-    public const string Version = "0.1.0";
+    public const string Version = "0.1.2";
     internal static ManualLogSource Logger;
     internal static Plugin Instance;
 

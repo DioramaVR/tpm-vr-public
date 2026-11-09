@@ -7,78 +7,49 @@
     "developer": "Two Point Studios",
     "publisher": "SEGA"
   },
-  "tagline": "Your museum as a living model on the table in front of you.",
-  "description": "Two Point Museum VR puts your whole museum on a table in front of you, like a model you can pick up. Grab it to move it, pull your hands apart to zoom in on a single exhibit, and twist to turn it round. Guests wander the halls, staff get on with their jobs, and you build and run everything as usual.\n\nYour hand is the mouse: point the laser at the game's menus and click, pick exhibits up and put them down where you like. The game's menus float on a panel behind the table, or split into windows around it, and you can move them wherever suits you. Prefer a smaller view? Turntable shows a circle of the museum on a table that spins.",
-  "requirements": [
-    "Runs in DirectX 11. The installer sets the launch options for you.",
-    "Made for seated play: the table sits at 0.75 m by default, and you can raise it on the View page.",
-    "Tested on a Quest 2 through SteamVR. Other SteamVR headsets should work but haven't been tested.",
-    "Left-handed players can swap the laser to the left hand in the VR menu."
+  "credits": [
+    {
+      "name": "Diorama VR core (dvr-unity-core)",
+      "for": "The VR rig, menus and controls",
+      "license": "MIT",
+      "url": "https://github.com/DioramaVR/dvr-unity-core-public"
+    },
+    {
+      "name": "BepInEx",
+      "for": "Loads the mod into the game",
+      "license": "LGPL-2.1",
+      "url": "https://github.com/BepInEx/BepInEx"
+    },
+    {
+      "name": "Il2CppInterop",
+      "for": "Lets the mod talk to the game code",
+      "license": "LGPL-3.0",
+      "url": "https://github.com/BepInEx/Il2CppInterop"
+    },
+    {
+      "name": "HarmonyX",
+      "for": "Patches the game code",
+      "license": "MIT",
+      "url": "https://github.com/BepInEx/HarmonyX"
+    },
+    {
+      "name": "OpenVR SDK",
+      "for": "Talks to SteamVR",
+      "license": "BSD-3-Clause",
+      "url": "https://github.com/ValveSoftware/openvr"
+    },
+    {
+      "name": "Lucide icons",
+      "for": "Menu icons",
+      "license": "ISC",
+      "url": "https://github.com/lucide-icons/lucide"
+    }
   ],
+  "tagline": "Your museum as a living model in front of you.",
+  "line": "Your museum as a living model. Prehistory has never been so alive.",
   "firstLaunch": "It takes a few minutes, with a blank window, while BepInEx reads the game. It needs the internet that first time. Keep your VPN off.",
   "needToKnow": [
-    "The game's camera tutorial asks you to tilt the camera: click the right stick. The table itself doesn't tilt, so lean or move your head to see it from another angle. While you're holding an exhibit, the same click changes placement mode instead."
-  ],
-  "controls": [
-    {
-      "input": "Right trigger",
-      "action": "Click. Hold on an exhibit to pick it up, let go to put it down",
-      "primary": true
-    },
-    {
-      "input": "B",
-      "action": "Right click"
-    },
-    {
-      "input": "Either grip",
-      "action": "Move the table",
-      "primary": true
-    },
-    {
-      "input": "Both grips",
-      "action": "Scale and turn the table",
-      "primary": true
-    },
-    {
-      "input": "Left stick left / right",
-      "action": "Turn the table",
-      "primary": true
-    },
-    {
-      "input": "Left stick up / down",
-      "action": "Zoom",
-      "primary": true
-    },
-    {
-      "input": "Right stick",
-      "action": "Pan around the museum (in Turntable, move the circle)",
-      "primary": true
-    },
-    {
-      "input": "Click the right stick",
-      "action": "Tilt the game's camera (the table itself doesn't tilt). While holding an exhibit, change placement mode"
-    },
-    {
-      "input": "A, or right stick left / right",
-      "action": "Rotate the exhibit you're holding"
-    },
-    {
-      "input": "Click the left stick",
-      "action": "Open or close the VR menu",
-      "primary": true
-    },
-    {
-      "input": "Both grips + both triggers",
-      "action": "Open the VR menu, at any time"
-    },
-    {
-      "input": "X",
-      "action": "Pause / play"
-    },
-    {
-      "input": "Y",
-      "action": "Back / close a menu"
-    }
+    "The game's camera tutorial asks for keys you don't have in VR. Click the right stick to tilt the camera, or switch on the Tutorial button bar on the VR menu's Home page for the other camera keys."
   ],
   "tutorial": [
     {
@@ -90,9 +61,18 @@
       "title": "Point, click and pick up",
       "text": "Your right hand is a laser pointer, like the mouse. These controls are for right-handed play: Left-handed (in the settings here, or on the VR menu's Controls page) swaps the hands.",
       "controls": [
-        "Right trigger",
-        "B",
-        "A, or right stick left / right",
+        {
+          "input": "Right trigger",
+          "action": "Click. Hold on an exhibit to pick it up, let go to put it down"
+        },
+        {
+          "input": "B",
+          "action": "Right click"
+        },
+        {
+          "input": "A, or right stick left / right",
+          "action": "Rotate the exhibit you're holding"
+        },
         {
           "input": "Click the right stick",
           "action": "Change placement mode while holding one"
@@ -103,7 +83,10 @@
       "title": "Move the table",
       "text": "Reach out and grab it.",
       "controls": [
-        "Either grip",
+        {
+          "input": "Either grip",
+          "action": "Move the table"
+        },
         {
           "input": "Both grips",
           "action": "Scale and turn it"
@@ -112,7 +95,10 @@
           "input": "Left stick left / right",
           "action": "Turn it"
         },
-        "Left stick up / down",
+        {
+          "input": "Left stick up / down",
+          "action": "Zoom"
+        },
         {
           "input": "Right stick",
           "action": "Pan around the museum"
@@ -137,10 +123,22 @@
       "title": "The VR menu",
       "text": "Settings, the controls (you can rebind them) and where the game's windows sit are all in the VR menu. Its Help page answers questions about Two Point Museum in VR.",
       "controls": [
-        "Click the left stick",
-        "Both grips + both triggers",
-        "X",
-        "Y"
+        {
+          "input": "Click the left stick",
+          "action": "Open or close the VR menu"
+        },
+        {
+          "input": "Both grips + both triggers",
+          "action": "Open the VR menu, at any time"
+        },
+        {
+          "input": "X",
+          "action": "Pause / play"
+        },
+        {
+          "input": "Y",
+          "action": "Back / close a menu"
+        }
       ]
     },
     {
@@ -207,13 +205,19 @@
       "kind": "video",
       "role": "turntable",
       "alt": "A museum captured as a 3D model, turning slowly on a turntable.",
-      "poster": "media/turntable-poster.jpg"
+      "poster": "media/turntable-poster.jpg",
+      "sources": [
+        "media/turntable-720.mp4"
+      ]
     },
     {
       "file": "media/turntable-720.webm",
       "kind": "video",
       "role": "hover",
-      "alt": "A museum captured as a 3D model, turning slowly."
+      "alt": "A museum captured as a 3D model, turning slowly.",
+      "sources": [
+        "media/turntable-720.mp4"
+      ]
     },
     {
       "file": "media/headset-view.jpg",

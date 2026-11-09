@@ -4,8 +4,29 @@
   "name": "Two Point Museum VR",
   "game": "Two Point Museum",
   "appid": 2185060,
-  "description": "Your museum as a living model on the table in front of you.",
+  "description": "Your museum as a living model in front of you.",
   "releases": [
+    {
+      "version": "0.1.2",
+      "maturity": "open-beta",
+      "date": "2026-11-09",
+      "coreVersion": "0.1.1",
+      "minAppVersion": "0.2.0",
+      "testedBuildIds": [
+        "26287332"
+      ],
+      "url": "https://github.com/DioramaVR/tpm-vr-public/releases/download/v0.1.2/tpm-vr-0.1.2.zip",
+      "sha256": "4C04F65B934D1AA71F9CF61B47C56F9C1802F41934976F3F9E657F7B4267A330",
+      "size": 42847496,
+      "source": {
+        "commit": "43cfe0f775efc78c55ae11cef316c19f9dfabbd6",
+        "coreRepo": "DioramaVR/dvr-unity-core-public",
+        "coreCommit": "af336ac9e2440bcfdb5b5243c87af5c61cf3f5a4",
+        "coreFrom": "tag v0.1.1",
+        "actionsCommit": "90b35b9a17bb777759cdf91c1f3628a02d5ecc21",
+        "builtAt": "2026-11-09T20:58:42.505Z"
+      }
+    },
     {
       "version": "0.1.0",
       "maturity": "open-beta",
@@ -48,6 +69,13 @@
       "title": "The monitor doesn't show the game's menus",
       "severity": "minor",
       "text": "While you're in VR, the game's menus are drawn in the headset only, so someone watching the monitor won't see them.",
+      "since": "0.1.0"
+    },
+    {
+      "id": "slow-first-start",
+      "title": "The first start can be slow",
+      "severity": "minor",
+      "text": "The first time you start the game after a while, it can take about a minute before anything happens, while the game and the mod load from disk. Starting it again later only takes a few seconds.",
       "since": "0.1.0"
     }
   ],

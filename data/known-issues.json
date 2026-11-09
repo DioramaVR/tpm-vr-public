@@ -21,17 +21,10 @@
     "since": "0.1.0"
   },
   {
-    "id": "window-clicks",
-    "title": "Split window modes are still being tested",
-    "severity": "annoying",
-    "text": "Clicks in the Arranged and Free window modes haven't been fully tested. If a button doesn't respond, switch to Panel on the VR menu's Game UI page.",
-    "since": "0.1.0"
-  },
-  {
-    "id": "passthrough",
-    "title": "The Passthrough background doesn't work yet",
+    "id": "slow-first-start",
+    "title": "The first start can be slow",
     "severity": "minor",
-    "text": "Turntable's Passthrough background needs a green-screen key in the headset, which Virtual Desktop doesn't support yet. Use Light or Dark for now.",
+    "text": "The first time you start the game after a while, it can take about a minute before anything happens, while the game and the mod load from disk. Starting it again later only takes a few seconds.",
     "since": "0.1.0"
   }
 ]

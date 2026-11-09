@@ -44,7 +44,7 @@ sealed class TpmUi : IVrUiHost
         VrUi.Exclude(SaveIcons);
         VrUi.RegisterLayout(DefaultLayout());
         RegisterActions(cfg);
-        RegisterHotkeys();
+        RegisterHotkeys(cfg);
 
         VrSettings.Add(new ToggleSetting("Controls", "Left-handed", cfg.LeftHanded));
         VrSettings.Add(new NumberSetting("Controls", "Laser angle", cfg.PointerPitch, 0, 90, 5, "0"));
@@ -76,8 +76,6 @@ sealed class TpmUi : IVrUiHost
             "Orbit circles round a character, and the museum has no character to follow. Use Diorama for the whole museum, or Turntable for a circle of it.");
         MenuFaq.Add("The headset looks flatter than the game on the monitor.",
             "The game's colour grading and bloom are off in the headset, because they darkened the menus and flickered on rooftops. Turn on Post-processing on the Graphics page to bring them back.");
-        MenuFaq.Add("Some buttons don't respond when the game's UI is split into windows.",
-            "Clicks in the Arranged window mode haven't been fully tested yet. If a button doesn't respond, switch to Panel on the Game UI page.");
     }
 
     // Controller actions. Groups are the situations an action is used in, so
@@ -102,10 +100,18 @@ sealed class TpmUi : IVrUiHost
         ["Up"] = VKey.ZoomIn, ["Down"] = VKey.ZoomOut,
     };
 
-    static void RegisterHotkeys()
+    // The bar's name, also its config key ([VrUi] HotkeysOn / HotkeysPlace <name>).
+    public const string TutorialBar = "Tutorial";
+
+    static void RegisterHotkeys(Plugin cfg)
     {
         VrHotkeys.UseKeys((key, down) => { if (down && hotkeys.TryGetValue(key, out var k)) VirtualKeyboard.Hold(k); });
-        VrHotkeys.Set("Tutorial")
+        // Off until the player switches it on. The core binds [VrUi] HotkeysOn <set> with
+        // its own default (on) when the set is made; binding it first, here, sets the
+        // default (BepInEx keeps the first binding). A saved value still wins.
+        cfg.Config.Bind("VrUi", "HotkeysOn " + TutorialBar, false,
+            $"Show the '{TutorialBar}' hotkey bar (buttons that press the game's keys).");
+        VrHotkeys.Set(TutorialBar)
             .Group("Pan", 0, 0)
                 .Button("Pan forward", "W", 1, 0, icon: "arrow-up").Button("Pan left", "A", 0, 1, icon: "arrow-left")
                 .Button("Pan right", "D", 2, 1, icon: "arrow-right").Button("Pan back", "S", 1, 2, icon: "arrow-down").Set

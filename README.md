@@ -1,6 +1,6 @@
 # Two Point Museum VR
 
-A VR mod for Two Point Museum: your whole museum on a table in front of you,
+A VR mod for Two Point Museum: your whole museum in front of you,
 like a model you can pick up, move, scale and turn. Point the laser at the
 game's menus to click, and pick exhibits up and put them down by hand.
 
