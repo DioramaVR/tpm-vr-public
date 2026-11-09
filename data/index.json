@@ -56,5 +56,82 @@
     "sha256": "9C790E10EB85DC86F1AC2E991AAA06CEB4A39E62A0398B3CAE512366BFCB82F8",
     "size": 12747977,
     "date": "2026-11-08"
+  },
+  "assets": {
+    "release": "assets-1",
+    "date": "2026-11-09",
+    "files": {
+      "museum-overview.jpg": {
+        "url": "https://github.com/DioramaVR/tpm-vr-public/releases/download/assets-1/museum-overview.jpg",
+        "sha256": "9fa5c6b1b5c7bb302ea17b3737c49bb29cbccf1ffc447652c6e2a11606cb1f44",
+        "size": 182877
+      },
+      "turntable-720.webm": {
+        "url": "https://github.com/DioramaVR/tpm-vr-public/releases/download/assets-1/turntable-720.webm",
+        "sha256": "4ce051a30c77ac4b5b8845b09d4f86d04455fd88c3857eb8d5be1ffab2dd6cdc",
+        "size": 6430973
+      },
+      "turntable-poster.jpg": {
+        "url": "https://github.com/DioramaVR/tpm-vr-public/releases/download/assets-1/turntable-poster.jpg",
+        "sha256": "aa6ad72a8eea93a88d458defc9116f261f5472068478ad5b260a46f5474a1ea8",
+        "size": 81371
+      },
+      "turntable-720.mp4": {
+        "url": "https://github.com/DioramaVR/tpm-vr-public/releases/download/assets-1/turntable-720.mp4",
+        "sha256": "84070acbb252324726da246fd2bc8c45ee8dacff94dfc6e780ec2e5a5ea6e18c",
+        "size": 1779270
+      },
+      "build-menu.jpg": {
+        "url": "https://github.com/DioramaVR/tpm-vr-public/releases/download/assets-1/build-menu.jpg",
+        "sha256": "ed73697d94110dc745cf2e1d9e0c28a317495ad53d043ff4faa4fdd39da42728",
+        "size": 186758
+      },
+      "frozen-caveman.jpg": {
+        "url": "https://github.com/DioramaVR/tpm-vr-public/releases/download/assets-1/frozen-caveman.jpg",
+        "sha256": "2d6b42888093300cdde3ac6bcec8009ffe8750c860e3eef4bd610d70d5ea93cb",
+        "size": 105165
+      },
+      "museum-on-table.jpg": {
+        "url": "https://github.com/DioramaVR/tpm-vr-public/releases/download/assets-1/museum-on-table.jpg",
+        "sha256": "3f0514c6c771ce2d981e0808b581a9ec2ded9b4213dbd05b87c01de9b7036735",
+        "size": 80021
+      }
+    },
+    "media": [
+      {
+        "file": "museum-overview.jpg",
+        "kind": "image",
+        "role": "hero",
+        "alt": "A busy prehistory hall from above: guests crowd round fossils and a dinosaur skeleton, with the city and glasshouses behind."
+      },
+      {
+        "file": "turntable-720.webm",
+        "kind": "video",
+        "role": "turntable",
+        "alt": "A museum captured as a 3D model, turning slowly on a turntable.",
+        "poster": "turntable-poster.jpg",
+        "sources": [
+          "turntable-720.mp4"
+        ]
+      },
+      {
+        "file": "build-menu.jpg",
+        "kind": "image",
+        "role": "gallery",
+        "alt": "The game's build menu floating in VR beside the museum, with the objectives and stats panels further off."
+      },
+      {
+        "file": "frozen-caveman.jpg",
+        "kind": "image",
+        "role": "gallery",
+        "alt": "Up close in the headset: a caveman frozen in an ice block, with guests taking photos next to it."
+      },
+      {
+        "file": "museum-on-table.jpg",
+        "kind": "image",
+        "role": "gallery",
+        "alt": "A hall of the museum as a small diorama on the table, frozen exhibits and all."
+      }
+    ]
   }
 }
