@@ -102,10 +102,10 @@
     }
   ],
   "data": {
-    "url": "https://github.com/DioramaVR/tpm-vr-public/releases/download/data-2/tpm-vr-data.zip",
-    "sha256": "2B884B73DA0D4E86BAEF8D14FA8C4F41812956A5004C97B2E93936C118D714BE",
-    "size": 12747902,
-    "date": "2026-11-09"
+    "url": "https://github.com/DioramaVR/tpm-vr-public/releases/download/data-3/tpm-vr-data.zip",
+    "sha256": "2BCCADFFD008468E1755D621ADD121DC1097B2553D3C262FF80459503ABF7B66",
+    "size": 12748006,
+    "date": "2026-11-23"
   },
   "assets": {
     "release": "assets-1",
