@@ -46,8 +46,8 @@
     }
   ],
   "tagline": "Your museum as a living model in front of you.",
-  "line": "Your museum as a living model. Prehistory has never been so alive.",
-  "firstLaunch": "It takes a few minutes, with a blank window, while BepInEx reads the game. It needs the internet that first time. Keep your VPN off.",
+  "line": "A whole museum, close enough to dust.",
+  "firstLaunch": "Before the game starts, its copy protection (Denuvo) asks you to activate it: click Next, copy the code at the bottom of the web page that opens, and paste it into the pop-up. That's expected, not a fault. If it asks again later, do the same. Then the game takes a few minutes, with a blank window, while BepInEx reads it. It needs the internet that first time. Keep your VPN off.",
   "needToKnow": [
     "The game's camera tutorial asks for keys you don't have in VR. Click the right stick to tilt the camera, or switch on the Tutorial button bar on the VR menu's Home page for the other camera keys."
   ],
@@ -155,6 +155,9 @@
   "install": {
     "exe": "TPM.exe",
     "launchArgs": "-force-d3d11",
+    "vrLaunch": {
+      "args": "-dvr-vr"
+    },
     "steamAppIdFile": true,
     "loaderConfig": {
       "Logging.Console": {

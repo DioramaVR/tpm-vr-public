@@ -4,8 +4,30 @@
   "name": "Two Point Museum VR",
   "game": "Two Point Museum",
   "appid": 2185060,
-  "description": "Your museum as a living model in front of you.",
+  "description": "A whole museum, close enough to dust.",
   "releases": [
+    {
+      "version": "0.1.3",
+      "maturity": "open-beta",
+      "date": "2026-11-23",
+      "coreVersion": "0.1.2",
+      "minAppVersion": "0.2.0",
+      "testedBuildIds": [
+        "26287332"
+      ],
+      "notes": "Steam Frame support (experimental) and a fix for the VR view's lens projection.",
+      "url": "https://github.com/DioramaVR/tpm-vr-public/releases/download/v0.1.3/tpm-vr-0.1.3.zip",
+      "sha256": "B51EF40EA5ED3CB9B693FC1506CE76D84EB1AEA9E0FA72EE4B3304F1CBD6469B",
+      "size": 42851314,
+      "source": {
+        "commit": "f262f12ac56f93503cf0286788e400a12e93887a",
+        "coreRepo": "DioramaVR/dvr-unity-core-public",
+        "coreCommit": "7e87a4b9af3e9455765db43f42a1cea3dd47c3e2",
+        "coreFrom": "tag v0.1.2",
+        "actionsCommit": "4e76a1563ee7a492d9549453ab4acfe78d13547c",
+        "builtAt": "2026-11-23T13:01:23.897Z"
+      }
+    },
     {
       "version": "0.1.2",
       "maturity": "open-beta",
